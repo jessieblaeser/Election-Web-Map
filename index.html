@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Map 2020</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Vizualizing the 2020 Presidential Election Two Different Ways</h1>
+    <p>Taking inspiration from <a href="https://www.nytimes.com/interactive/2016/11/01/upshot/many-ways-to-map-election-results.html">The New York Times Upshot's</a> own introspection of the many ways to vizualize election results, I have tried two tactics below: a choropleth map and a graduated cylinder map.</p>
+    <p>Both maps are ✨interactive✨ (go ahead, click and zoom around!) and were made using MapBox, geopandas and javascript.</p>
+    <hr>
+    <div id='map'>
+    <div id='title' class="title">
+        <h1>Just two counties in Kentucky voted for Joe Biden in 2020</h1>
+        <p>Zoom in and out to see state and county results across the country. Click on each state or county for more detailed information about each candidate's performance.
+            <br>
+            <br>
+            Data source:
+            <br>
+            MIT Election Data and Science Lab, 2018, "County Presidential Election Returns 2000-2020", <a href='https://doi.org/10.7910/DVN/VOQCHQ'>https://doi.org/10.7910/DVN/VOQCHQ</a>, Harvard Dataverse, V10, UNF:6:pVAMya52q7VM1Pl7EZMW0Q== [fileUNF]
+        </p>
+
+        <hr>
+        <div id="turnstile-legend" class="legend2">
+        </div>
+        <div id="income-legend" class="legend">
+            <h4>Percent of votes recieved by each county's winning candidate</h4>
+            <div><span style="background-color: #6193c7"></span>Joe Biden</div>
+            <div><span style="background-color: #cf635d"></span>Donald Trump</div>
+        </div>
+
+        
+        </div>
+    </div>
+</div>
+    <div id='map2'>
+    <div id='title' class="title">
+        <h1>Donald Trump won more individual counties, but Joe Biden won over more people</h1>
+        <p>Click on each dot to see county-level information about each county's winning candidate, number of voters and the percentage of votes the winner recieved.
+            <br>
+            <br>
+            Data source:
+            <br>
+            MIT Election Data and Science Lab, 2018, "County Presidential Election Returns 2000-2020", <a href='https://doi.org/10.7910/DVN/VOQCHQ'>https://doi.org/10.7910/DVN/VOQCHQ</a>, Harvard Dataverse, V10, UNF:6:pVAMya52q7VM1Pl7EZMW0Q== [fileUNF]
+        </p>
+        <hr>
+        <div id="turnstile-legend" class="legend2">
+            <h4>Number of votes cast for each county's winning candidate</h4>
+            <p><em>Click on cicles for detailed election information</em></p>
+            <div><span style="background-color: #a4a4a4"></span>&#8594;<span style="background-color: #a4a4a4; height:20px; width:20px"></span> < 50% decrease to > 90% decrease</div>
+        </div>
+        <div id="income-legend" class="legend">
+            <h4>Percent of votes recieved by each county's winning candidate</h4>
+            <div><span style="background-color: #6193c7"></span>Joe Biden</div>
+            <div><span style="background-color: #cf635d"></span>Donald Trump</div>
+        </div>
+    </div>
+</div>
+   
+
+    <script type='text/javascript' src="map.js"></script>
+</body>
+</html>
